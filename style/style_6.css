@@ -1,0 +1,64 @@
+.Form {
+  display: flex;
+  flex-flow: column;
+  background: #f9f9f9;
+  padding: 4rem 4rem;
+}
+.Form button {
+  background: #ddd;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 80px;
+}
+.Form button + button {
+  margin-left: 0.5rem;
+}
+.Form > .group {
+  text-decoration: none;
+  display: flex;
+  margin-bottom: 1em;
+}
+.Form > .group label {
+  min-width: 12rem;
+  margin-right: 0.5em;
+  padding: 0.5rem 0;
+}
+.Form > .group input {
+  flex: 1;
+  padding: 0.5rem;
+}
+.Form .is-fancy {
+  display: flex;
+  flex: 1;
+}
+.Form .is-fancy > .field,
+.Form .is-fancy > .item {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+.Form .is-fancy .field {
+  flex: 1;
+}
+.Form .is-fancy .item {
+  min-width: 3rem;
+}
+.Form .is-fancy .field:not(:first-child) {
+  border-left: 10px;
+}
+.Form .is-fancy .field:not(:last-child) {
+  border-right: 10px;
+}
+.Form .is-fancy .field:first-child,
+.Form .is-fancy .item:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.Form .is-fancy .field:last-child,
+.Form .is-fancy .item:last-child {
+  border-radius: 0 4px 4px 0;
+}
+@media (max-width: 640px) {
+  .Form {
+    background: #aaa;
+    padding: 2rem;
+  }
+}

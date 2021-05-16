@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+.row--1 {
+  display: table;
+  width: 100%;
+}
+
+
+
+.row--1 .cell {
+    display: table-cell;
+  }
+
+
+.row--2 .cell {
+    box-sizing: border-box;
+    width: 33.33%;
+    float: left;
+  }
+
+.row--2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+.row--3 .cell {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 33.33%;
+  }
+
+.row--4 {
+  display: flex;
+}
+
+
+
+.row--4 .cell {
+    flex: 1 0 auto;
+  }
+
+
+.row--5 {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+
+
+
+
+
+
+/*________________________________________*/
+/* showcase styling */
+/*________________________________________*/
+/* showcase styling */
+
+body {
+  padding: 20px;
+  background-color: #333;
+  color: #eee;
+  font-family: Roboto, Arial, sans-serif;
+  
+  counter-reset: hide;       
+}
+
+h2 {
+  margin: 0 0 .25em 0;
+  font-size: 2em;
+  font-family: 'Kalam', cursive;
+  font-weight: normal;
+  color: gold;
+}
+
+em {
+  color: gold;
+  font-family: 'Kalam', cursive;
+  font-style: normal;
+}
+
+h3 {
+  margin: 0 0 2em 0;
+  font-weight: normal;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hide {
+  position: relative;
+  flex: 0 1 280px;
+  background-color: #999975;
+  border: 1px solid #999930;
+}
+
+.hide::before {
+  display: inline-block;
+  padding: 1em;
+  counter-increment: hide;                
+  content: counter(hide) ". " attr(data-with); 
+  font-size: 90%;
+  color: #aaa;
+}
+
+.cell {
+  padding: 1em 0;
+  border: 1px solid #999920;
+  background-color: #888825;
+  color: #333;
+  text-align: center;
+}
+
+.row {
+  position: relative;
+}
+
+.row:before {
+    position: absolute;
+    top: 1em;
+    left: .5em;
+    color: #888;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(15,15,15,.5)
+  }

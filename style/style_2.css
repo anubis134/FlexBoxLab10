@@ -1,0 +1,37 @@
+
+body {
+ 
+   display: flex
+     
+     flex-direction: column
+
+}
+header,
+ 
+footer {
+ 
+  height: 20vh; background-color: #666545
+ 
+}
+main {
+ display: flex;
+   flex: 1;
+ background-color: #369963;
+}
+nav,
+aside {
+ height: 20vh;
+  width: 20vw;
+ background-color: #458745;
+}
+
+article {
+ 
+   flex: 1;
+ background-color: #777777;
+}
+nav {
+ 
+  order: -1;
+ background-color: #258456;
+}
